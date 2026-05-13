@@ -3,6 +3,7 @@ package com.devidnest.products_api.controller;
 
 import com.devidnest.products_api.model.Product;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductController {
 
     @PostMapping
-    public void saveProduct(Product product) {
+    public void saveProduct(@RequestBody Product product) {
         System.out.println("Saving product: " + product);
     }
 }
