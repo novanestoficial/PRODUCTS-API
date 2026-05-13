@@ -27,4 +27,9 @@ public class ProductController {
         return productRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Produto não encontrado"));
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteProductById(@PathVariable Long id) {
+        productRepository.deleteById(id);
+    }
 }
