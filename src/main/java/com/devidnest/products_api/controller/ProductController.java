@@ -51,4 +51,9 @@ public class ProductController {
 
         productRepository.save(existingProduct);
     }
+
+    @GetMapping
+    public List<Product> findProductsByName(@RequestParam("name") String name) {
+        return productRepository.findByName(name);
+    }
 }

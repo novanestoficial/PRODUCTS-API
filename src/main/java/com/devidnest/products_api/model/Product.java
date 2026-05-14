@@ -28,7 +28,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product: \n"
+        return "\nProduct: \n"
                 + "ID: " + id + "\n"
                 + "NAME: " + name + "\n"
                 + "DESCRIPTION: " + description + "\n"
