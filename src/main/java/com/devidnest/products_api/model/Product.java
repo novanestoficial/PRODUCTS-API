@@ -26,4 +26,13 @@ public class Product {
     @Column(name = "price")
     private Double price;
 
+    @Override
+    public String toString() {
+        return "Product: \n"
+                + "ID: " + id + "\n"
+                + "NAME: " + name + "\n"
+                + "DESCRIPTION: " + description + "\n"
+                + "PRICE: " + price + "\n";
+    }
+
 }
